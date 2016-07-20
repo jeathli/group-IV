@@ -23,3 +23,6 @@
 # Ignore test-related files
 /coverage.data
 /coverage/
+
+#ignore .DS_Store
+.DS_Store
