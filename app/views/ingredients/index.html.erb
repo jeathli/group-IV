@@ -1,0 +1,12 @@
+<h1>Wanna have lunch?</h1>
+<button>YES!</button>
+
+<h1>What do you have in your fridge?</h1>
+
+<%= form_tag(recipes_path, method: "get") do %>
+  <% @ingredients.each do |ing| %>
+    <%= radio_button_tag(:ingredient, ing.id) %>
+    <%= label_tag(:ingredient, ing.name) %><br>
+  <% end %>
+  <%= submit_tag("Give me recipe!") %>
+<% end %>
