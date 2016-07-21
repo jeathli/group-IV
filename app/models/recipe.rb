@@ -1,5 +1,5 @@
 class Recipe < ApplicationRecord
   validates :name, presence: true,
-    uniqueness :true
+    uniqueness: true
   validates :description, presence: true
 end
