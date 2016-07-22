@@ -15,3 +15,12 @@
     </ul>
   </div>
 </div>
+
+<h1>Your search results:</h1>
+<div>
+  <% @recipes.each do |r| %>
+    <h3><%= link_to r.name, r %> </h3>
+    <p><%= r.description %></p>
+  <% end %>
+</div>
+
