@@ -3,6 +3,6 @@ class Recipe < ApplicationRecord
     uniqueness: true
   validates :description, presence: true
 
-  has_many :recipe_and_ingredients
-  has_many :ingredients, through: :recipe_and_ingredients
+  has_many :ingredients_recipes
+  has_many :ingredients, through: :ingredients_recipes
 end
