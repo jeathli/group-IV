@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-
   get 'ingredients/index'
 
   root 'ingredients#index'
@@ -9,5 +8,4 @@ Rails.application.routes.draw do
   get 'recipes' => "recipes#index"
 
   get '/' => 'application#index'
-
 end
