@@ -6,9 +6,14 @@ class RecipesController < ApplicationController
       @recipes = Ingredient.find(ingredient_id).recipes
     else
       @recipes = Recipe.all
-   end
- end
+    end
+  end
 
   def show
+  end
+
+  def random
+    @recipe = Recipe.random.first
+    render 'show'
   end
 end
