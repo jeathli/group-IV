@@ -30,10 +30,12 @@ ActiveRecord::Schema.define(version: 20160721111955) do
   end
 
   create_table "recipes", force: :cascade do |t|
-    t.string   "name",        null: false
-    t.text     "description", null: false
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.string   "name",               null: false
+    t.text     "ingredient_details", null: false
+    t.text     "description",        null: false
+    t.string   "img_url",            null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
     t.index ["name"], name: "index_recipes_on_name", unique: true, using: :btree
   end
 

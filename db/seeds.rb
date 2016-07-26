@@ -9,12 +9,16 @@ lorem = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nibh aug
   purus sapien ultricies dolor, et mollis pede metus eget nisi. Praesent sodales velit quis augue. Cras suscipit, urna at aliquam rhoncus,
   urna quam viverra nisi, in interdum massa nibh nec erat."
 
+image_url = "http://d.wpimg.pl/180968739-1296107597/stek-wolowina-miesko.jpg"
+
+details = "Bottle of wine, pizza"
+
 [
-   { name: 'venetian-style pasta', description: lorem },
-   { name: 'tomato and thyme cod', description:lorem },
-   { name: 'lemon chicken with spring veg noodles', description: lorem },
-   { name: 'curry in a hurry', description:lorem },
-   { name: '20-minutes beef in red wine', description: lorem }
+   { name: 'venetian-style pasta', description: lorem, img_url: image_url, ingredient_details: details },
+   { name: 'tomato and thyme cod', description: lorem, img_url: image_url, ingredient_details: details },
+   { name: 'lemon chicken with spring veg noodles', description: lorem, img_url: image_url, ingredient_details: details },
+   { name: 'curry in a hurry', description: lorem, img_url: image_url, ingredient_details: details },
+   { name: '20-minutes beef in red wine', description: lorem, img_url: image_url, ingredient_details: details }
 ].each{|x| Recipe.create(x)}
 
 ingredients = [
