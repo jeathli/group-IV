@@ -4,9 +4,6 @@
 <h1>What do you have in your fridge?</h1>
 
 <%= form_tag(recipes_path, method: "get") do %>
-  <% @ingredients.each do |ing| %>
-    <%= radio_button_tag(:ingredient, ing.id) %>
-    <%= label_tag(:ingredient, ing.name) %><br>
-  <% end %>
+  <%= select_tag "ingredient", options_from_collection_for_select(@ingredients, "id", "name") %>
   <%= submit_tag("Give me recipe!") %>
 <% end %>
