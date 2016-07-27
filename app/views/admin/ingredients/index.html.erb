@@ -1,2 +1,28 @@
 <h1>Admin::Ingredient#index</h1>
-<p>Find me in app/views/admin/ingredient/index.html.erb</p>
+<p id="notice"><%= notice %></p>
+
+<h1>Ingredients:</h1>
+
+<table width="100%" border="1">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="2">Options</th>
+
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ingredients.each do |ingredient| %>
+      <tr>
+        <td><%= ingredient.name %></td>
+        <td><%= link_to 'Edit', [:edit, :admin, ingredient] %></td>
+        <td><%= link_to 'Destroy', [:admin, ingredient], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ingredient', [:new, :admin, :ingredient] %>
