@@ -6,14 +6,14 @@ class Admin::IngredientsController < ApplicationController
   end
 
   def new
-    @Ingredient = Ingredient.new
+    @ingredient = Ingredient.new
   end
 
   def create
     @ingredient = Ingredient.new(ingredient_params)
 
     if @ingredient.save
-      redirect_to @ingredient, notice: "Ingredient saved"
+      redirect_to admin_ingredients_path, notice: "Ingredient saved"
     else
       render 'new'
     end
@@ -23,7 +23,7 @@ class Admin::IngredientsController < ApplicationController
     @ingredient = Ingredient.find(params[:id])
 
     if @ingredient.update(params[:id])
-      redirect_to @ingredient, notice: "Ingredient uppdated"
+      redirect_to [:admin, @ingredient], notice: "Ingredient uppdated"
     else
       render 'edit'
     end

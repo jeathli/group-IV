@@ -1,2 +1,23 @@
-<h1>Admin::Ingredient#new</h1>
-<p>Find me in app/views/admin/ingredient/new.html.erb</p>
+<h1> New ingredient</h1>
+<div>
+  <% if @ingredient.errors.any? %>
+    <ul>
+      <% @ingredient.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  <% end %>
+</div>
+
+<%= form_for [:admin, @ingredient] do |i| %>
+  <div class="group">
+    <%= i.label :name %><br>
+    <%= i.text_field :name %>
+  </div>
+
+  <div class="group">
+    <%= i.submit %>
+  </div>
+<% end %>
+
+<p><%= link_to 'Back', admin_ingredients_path %></p>
