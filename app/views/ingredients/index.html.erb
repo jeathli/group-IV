@@ -5,16 +5,18 @@
   </div>
 
   <div class="mdl-cell mdl-cell--6-col lunch-main-right">
-    <button class="lunch-main__button advent-pro-font">YES!</button>
+    <a href="#section2"><button class="lunch-main__button advent-pro-font">YES!</button></a>
   </div>
 </div>
 
-<div class="mdl-grid ingrediets-cover lunch-gap--none">
-  <div class="mdl-cell mdl-cell--12-col">
-    <h1 class="lunch-main-left__slogan--main">What do you have in your fridge?</h1>
-    <%= form_tag(recipes_path, method: "get") do %>
-      <%= select_tag "ingredient", options_from_collection_for_select(@ingredients, "id", "name") %>
-      <%= submit_tag("Give me recipe!") %>
+<div id="section2" class="mdl-grid ingrediets-cover lunch-gap--none grid--center">
+  <div class="mdl-cell mdl-cell--6-col">
+    <h1 class="ingredients-question">What do you have in your fridge?</h1>
+    <%= image_tag "fridge.png", class: "fridge-image" %>
+
+    <%= form_tag(recipes_path, method: "get", class: "form mdl-grid grid--center") do %>
+      <%= select_tag "ingredient", options_from_collection_for_select(@ingredients, "id", "name"), class: "mdl-cell--12-col select-landing" %>
+      <%= button_tag("GO!", class: "ingredients-go__button advent-pro-font mdl-cell--12-col") %>
     <% end %>
   </div>
 </div>
