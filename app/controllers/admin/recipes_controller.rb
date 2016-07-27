@@ -2,7 +2,7 @@ class Admin::RecipesController < ApplicationController
   http_basic_authenticate_with name: ENV.fetch('ADMIN_USER_NAME', 'admin'), password: ENV.fetch('ADMIN_PASSWORD', '1234')
 
   def index
-    @recipes = Recipe.all
+    @recipes = Recipe.all.order(:name)
   end
 
   def show
@@ -37,7 +37,7 @@ class Admin::RecipesController < ApplicationController
     @recipe = Recipe.find(params[:id])
 
     @recipe.destroy
-    redirect_to admin_recipe_path, notice: "Recipe deleted"
+    redirect_to admin_recipes_path, notice: "Recipe deleted"
   end
 
   private
