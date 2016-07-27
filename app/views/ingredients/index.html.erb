@@ -1,9 +1,20 @@
-<h1>Wanna have lunch?</h1>
-<button>YES!</button>
+<div class="mdl-grid lunch-cover lunch-gap--none">
+  <div class="mdl-cell mdl-cell--6-col lunch-main-left">
+    <h1 class="lunch-main-left__slogan--main">Wanna have</h1>
+    <h1 class="advent-pro-font lunch-main-left__slogan--sec">LUNCH?</h1>
+  </div>
 
-<h1>What do you have in your fridge?</h1>
+  <div class="mdl-cell mdl-cell--6-col lunch-main-right">
+    <button class="lunch-main__button advent-pro-font">YES!</button>
+  </div>
+</div>
 
-<%= form_tag(recipes_path, method: "get") do %>
-  <%= select_tag "ingredient", options_from_collection_for_select(@ingredients, "id", "name") %>
-  <%= submit_tag("Give me recipe!") %>
-<% end %>
+<div class="mdl-grid ingrediets-cover lunch-gap--none">
+  <div class="mdl-cell mdl-cell--12-col">
+    <h1 class="lunch-main-left__slogan--main">What do you have in your fridge?</h1>
+    <%= form_tag(recipes_path, method: "get") do %>
+      <%= select_tag "ingredient", options_from_collection_for_select(@ingredients, "id", "name") %>
+      <%= submit_tag("Give me recipe!") %>
+    <% end %>
+  </div>
+</div>

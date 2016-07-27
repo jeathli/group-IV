@@ -11,7 +11,10 @@
 // about supported directives.
 //
 //= require jquery
-//= require bootstrap-sprockets
 //= require jquery_ujs
 //= require turbolinks
+//= require material.min
 //= require_tree .
+document.addEventListener('turbolinks:load', function() {
+  componentHandler.upgradeDom();
+});
