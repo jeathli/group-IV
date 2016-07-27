@@ -1,0 +1,32 @@
+/*--- Square card ---*/
+.demo-card-square.mdl-card {
+  width: 400px;
+  height: 400px;
+}
+
+.demo-card-square > .mdl-card__title {
+  color: #fff;
+  background:
+  bottom right 15% no-repeat #ccc;
+}
+
+.list_item {
+  list-style: none;
+}
+
+.image {
+  align-items: inherit;
+  height:100%;
+  width:100%;
+}
+
+.mdl-card__title-text{
+}
+
+.recipe__link{
+  text-decoration: none;
+  color:#888;
+}
+.search_result__title{
+  padding-left:20px;
+}
