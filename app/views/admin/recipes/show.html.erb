@@ -1,2 +1,25 @@
 <h1>Admin::Recipe#show</h1>
-<p>Find me in app/views/admin/recipe/show.html.erb</p>
+<div class="container__recipe">
+  <div class="container__recipe--image">
+  </div>
+
+  <div class="container__recipe--description">
+    <h1 class="container__recipe--name"> Name: <%= @recipe.name %> </h1>
+    <%= image_tag(@recipe.img_url) %>
+    <div "container__recipe--summary">
+      <ul>
+        <li>Time: 30 min</li>
+        <li>For: 2 people</li>
+        <li>cheap</li>
+      </ul>
+    </div>
+
+    <div class="container__recipe--preparation">
+    <h3><%= @recipe.ingredient_details %></h3>
+      <strong>Text:</strong> <%= @recipe.description %>
+    </div>
+  </div>
+
+</div>
+<h3><%= link_to 'Destroy', [:admin, @recipe], method: :delete, data: { confirm: 'Are you sure?' } %></h3>
+<h3><%= link_to 'Edit', [:edit, :admin, @recipe] %></h3>
