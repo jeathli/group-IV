@@ -1,3 +1,12 @@
+.container__recipies--list{
+  padding-left: 5%;
+}
+
+.search_results__title{
+  padding: 1% 0% 5% 8%;
+  font-family: 'Advent Pro', sans-serif
+}
+
 /*--- Square card ---*/
 .demo-card-square.mdl-card {
   width: 400px;
@@ -6,8 +15,7 @@
 
 .demo-card-square > .mdl-card__title {
   color: #fff;
-  background:
-  bottom right 15% no-repeat #ccc;
+  background: bottom right 15% #ccc;
 }
 
 .list_item {
@@ -16,17 +24,17 @@
 
 .image {
   align-items: inherit;
-  height:100%;
   width:100%;
-}
-
-.mdl-card__title-text{
+  height: 100%;
 }
 
 .recipe__link{
   text-decoration: none;
   color:#888;
+  padding-right: 5%;
+  float:right;
 }
-.search_result__title{
-  padding-left:20px;
+
+.recipe__link:hover{
+  color:#000;
 }
