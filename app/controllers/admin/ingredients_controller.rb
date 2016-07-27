@@ -19,11 +19,15 @@ class Admin::IngredientsController < ApplicationController
     end
   end
 
+  def edit
+    @ingredient = Ingredient.find(params[:id])
+  end
+
   def update
     @ingredient = Ingredient.find(params[:id])
 
-    if @ingredient.update(params[:id])
-      redirect_to [:admin, @ingredient], notice: "Ingredient uppdated"
+    if @ingredient.update(ingredient_params)
+      redirect_to admin_ingredients_path, notice: "Ingredient uppdated"
     else
       render 'edit'
     end
