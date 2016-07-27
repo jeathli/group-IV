@@ -37,7 +37,7 @@ class Admin::RecipesController < ApplicationController
     @recipe = Recipe.find(params[:id])
 
     @recipe.destroy
-    redirect_to admin_recipe_path, notice: "Recipe deleted"
+    redirect_to admin_recipes_path, notice: "Recipe deleted"
   end
 
   private
