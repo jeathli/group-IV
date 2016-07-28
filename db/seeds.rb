@@ -10,13 +10,14 @@ lorem = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nibh aug
   urna quam viverra nisi, in interdum massa nibh nec erat."
 
 image_url = "http://d.wpimg.pl/180968739-1296107597/stek-wolowina-miesko.jpg"
-
-details = "Bottle of wine, pizza"
+image2_url = "http://kuchnialidla.e51-po.insyscd.net/vod/img/PosterLarge/6d2fd428d6-Cukiernik_KW_34_deser_sliwkowo-czekoladowy_12976_S124495_RGB_960x540.jpg"
+image3_url = "http://s3.party.pl/styl-zycia/dom/kuchnia-przepisy/deser-z-granatem-338830-article.jpg"
+details = "Bottle of wine \n bread \n salt"
 
 [
    { name: 'venetian-style pasta', description: lorem, img_url: image_url, ingredient_details: details },
-   { name: 'tomato and thyme cod', description: lorem, img_url: image_url, ingredient_details: details },
-   { name: 'lemon chicken with spring veg noodles', description: lorem, img_url: image_url, ingredient_details: details },
+   { name: 'tomato and thyme cod', description: lorem, img_url: image2_url, ingredient_details: details },
+   { name: 'lemon chicken with spring veg noodles', description: lorem, img_url: image3_url, ingredient_details: details },
    { name: 'curry in a hurry', description: lorem, img_url: image_url, ingredient_details: details },
    { name: '20-minutes beef in red wine', description: lorem, img_url: image_url, ingredient_details: details }
 ].each{|x| Recipe.create(x)}

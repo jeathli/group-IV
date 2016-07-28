@@ -1,34 +1,25 @@
-<div class="container__recipe">
-  <div class="container__recipe--image">
-  </div>
+<div class="container__recipe mdl-grid">
+  <div class="container__recipe--description dl-cell mdl-cell--6-col">
+    <h1 class="container__recipe--name"><%= @recipe.name.capitalize %> </h1>
 
-  <div class="container__recipe--description">
-    <h1 class="container__recipe--name"> Name: <%= @recipe.name %> </h1>
-    <%= image_tag(@recipe.img_url) %>
-    <div "container__recipe--summary">
+    <div class="container__recipe--summary">
       <ul>
         <li>Time: 30 min</li>
         <li>For: 2 people</li>
-        <li>cheap</li>
+        <li>Cost: cheap</li>
       </ul>
     </div>
 
+    <div class="container__recipe--ingredients_list"><b>Ingredients:</b><br>
+      <%= @recipe.ingredient_details %>
+    </div>
+
     <div class="container__recipe--preparation">
-    <h3><%= @recipe.ingredient_details %></h3>
-      <strong>Text:</strong> <%= @recipe.description %>
+      <%= @recipe.description %>
     </div>
   </div>
 
-  <div class="container__comments">
-    <ul class="container__comments--list">
-      <li>
-        <span class="user__name">QwertyJon</span>
-        <p class="comment__text" >lorem ipsum tastes delicious</p>
-        <span class="comment__timestamp">added: 21.07.2016 21:03</span></li>
-      <li>
-        <span class="user__name">rustyspoon</span>
-        <p class="comment__text">the best with dolor sit amet</p>
-        <span class="comment__timestamp">added: 21.07.2016 11:23</span></li>
-    </ul>
+  <div class="container__recipe--image mdl-cell mdl-cell--6-col">
+    <%= image_tag(@recipe.img_url) %>
   </div>
 </div>
