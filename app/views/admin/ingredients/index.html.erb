@@ -1,4 +1,9 @@
 <h1>Ingredients:</h1>
+
+<button class="mdl-button mdl-js-button mdl-button--raised">
+  <%= link_to 'add new', [:new, :admin, :ingredient] %>
+</button>
+
 <table width="100%" border="1">
   <thead>
     <tr>
@@ -8,13 +13,11 @@
   </thead>
   <tbody>
     <% @ingredients.each do |ingredient| %>
-      <tr>
-        <td><%= ingredient.name %></td>
-        <td><%= link_to 'Edit', [:edit, :admin, ingredient] %></td>
-        <td><%= link_to 'Destroy', [:admin, ingredient], method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+    <tr>
+      <td><%= ingredient.name %></td>
+      <td><%= link_to 'Edit', [:edit, :admin, ingredient] %></td>
+      <td><%= link_to 'Destroy', [:admin, ingredient], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
     <% end %>
   </tbody>
 </table>
-
-<p><%= link_to 'New Ingredient', [:new, :admin, :ingredient] %></p>
