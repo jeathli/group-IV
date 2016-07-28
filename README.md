@@ -39,13 +39,9 @@ All suggestions must follow steps:
 
 ## Authors
 
-* [Asia Bukowska](https://github.com/abukowska)
-* [Konrad Ciarczynski](https://github.com/crsck)
 * [Basia Cierocka](https://github.com/basiacierocka)
 * [Sandra Koryszewska](https://github.com/sandrakoryszewska)
-* [Agnieszka Kryjewska](https://github.com/almuredin)
 * [Małgorzata Maksimowicz](https://github.com/gosiamaks)
-* [Agata Salska](https://github.com/agatasalska)
 * [Aneta Woźniak](https://github.com/jeathli)
 
 ## Acknowledgments
