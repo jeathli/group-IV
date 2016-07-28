@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Luncher</title>
+      <%= csrf_meta_tags %>
+      <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+      <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="mdl-layout mdl-js-layout">
+      <header class="mdl-layout__header lunch-header">
+        <div class="mdl-layout__header-row lunch-header-row">
+          <%= link_to (image_tag "logo/logo2.png", class: "lunch-header-logo"), root_path  %>
+        </div>
+      </header>
+      <div class="mdl-layout__drawer">
+        <span class="mdl-layout-title">ADMIN</span>
+          <nav class="mdl-navigation">
+            <h6>Main:</h6>
+              <%= link_to "Home", root_path, class: "mdl-navigation__link"%>
+            <hr />
+            <h6>Ingredients:</h6>
+              <%= link_to "Add",  new_admin_ingredient_path, class: "mdl-navigation__link"%>
+              <%= link_to "List", admin_ingredients_path,     class: "mdl-navigation__link"%>
+            <hr />
+            <h6>Recipes:</h6>
+              <%= link_to "Add",  admin_recipes_path, class: "mdl-navigation__link"%>
+              <%= link_to "List", admin_recipes_path, class: "mdl-navigation__link"%>
+            <hr />
+          </nav>
+      </div>
+      <main class="mdl-layout__content">
+        <%= yield %>
+      </main>
+    </div>
+  </body>
+</html>
