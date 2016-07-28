@@ -1,5 +1,5 @@
 <div class="container__recipe mdl-grid">
-  <div class="container__recipe--description dl-cell mdl-cell--6-col">
+  <div class="container__recipe--description dl-cell mdl-cell--5-col">
     <h1 class="container__recipe--name"><%= @recipe.name.capitalize %> </h1>
 
     <div class="container__recipe--summary">
@@ -18,7 +18,7 @@
       <%= @recipe.description %>
     </div>
   </div>
-
+  <div class="dl-cell mdl-cell--1-col"></div>
   <div class="container__recipe--image mdl-cell mdl-cell--6-col">
     <%= image_tag(@recipe.img_url) %>
   </div>
