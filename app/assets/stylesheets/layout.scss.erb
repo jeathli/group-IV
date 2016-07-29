@@ -11,6 +11,7 @@ body {
 
   &:hover {
     color: darken($color-brand, 50%);
+    cursor: hand;
   }
 }
 
@@ -95,9 +96,16 @@ body {
   font-size: 4em;
   left: -17%;
   position: relative;
+  transition: 0.5s;
 
   &:focus {
     outline: 0;
+  }
+
+  &:hover {
+    cursor: pointer;
+    color: black;
+    background: white;
   }
 }
 

@@ -9,4 +9,8 @@ class Recipe < ApplicationRecord
   has_many :ingredients, through: :ingredients_recipes
 
   scope :random, -> { order ('RANDOM()') }
+
+  def self.sample_recipe
+    random.first
+  end
 end

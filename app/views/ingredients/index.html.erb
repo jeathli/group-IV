@@ -16,7 +16,7 @@
 
     <%= form_tag(recipes_path, method: "get", class: "form mdl-grid grid--center") do %>
       <%= select_tag "ingredient", options_from_collection_for_select(@ingredients, "id", "name"),
-        class: "mdl-cell--12-col select-landing" %>
+        class: "mdl-cell--12-col select-landing"%>
       <%= button_tag("GO!", class: "ingredients-go__button advent-pro-font mdl-cell--12-col") %>
     <% end %>
   </div>
