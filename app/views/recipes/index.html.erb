@@ -4,7 +4,7 @@
   <div class="mdl-grid container__recipes">
     <div class="mdl-cell mdl-cell--4-col list_item">
       <div class="demo-card-square mdl-card mdl-shadow--2dp">
-        <%= image_tag @sample_recipe.img_url, class: "image" %>
+        <%= link_to(image_tag(@sample_recipe.img_url, class: "image"), r) %>
           <div class="mdl-card__title mdl-card--expand">
             <h2 class="mdl-card__title-text"><%= @sample_recipe.name.capitalize %></h2>
           </div>
@@ -28,7 +28,7 @@
     <% @recipes.each do |r| %>
       <div class="mdl-cell mdl-cell--4-col list_item">
         <div class="demo-card-square mdl-card mdl-shadow--2dp">
-          <%= image_tag r.img_url, class: "image" %>
+          <%= link_to(image_tag(r.img_url, class: "image"), r) %>
             <div class="mdl-card__title mdl-card--expand">
               <h2 class="mdl-card__title-text"><%= r.name.capitalize %></h2>
             </div>
