@@ -1,24 +1,28 @@
-<div class="custom-container">
-<h3>Ingredients:</h3>
-  <%= link_to 'add new', [:new, :admin, :ingredient],
-  class:"mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-container"%>
+<div class="mdl-grid admin_ingredients--center">
+  <div class="mdl-layout-spacer"></div>
+  <div class="mdl-cell mdl-cell--12-col">
+    <h1 class="container__recipe--name" style="text-align: center">Ingredients</h1>
+    <button class="mdl-button mdl-js-button mdl-button--fab ingredients">
+      <i class="material-icons"><%= link_to 'add new', [:new, :admin, :ingredient] %></i>
+    </button>
+  </div>
+</div>
 
-
-<table width="100%">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th colspan="2">Options</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @ingredients.each do |ingredient| %>
-    <tr>
-      <td><%= ingredient.name %></td>
-      <td><%= link_to 'Edit', [:edit, :admin, ingredient] %></td>
-      <td><%= link_to 'Destroy', [:admin, ingredient], method: :delete, data: { confirm: 'Are you sure?' } %></td>
-    </tr>
-    <% end %>
-  </tbody>
-</table>
+<div class="mdl-grid">
+  <div class="mdl-layout-spacer"></div>
+  <div class="mdl-cell mdl-cell--12-col center">
+    <table class="table ingredients">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th colspan="2">Options</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @ingredients.each do |ingredient| %>
+          <%= render partial: "ingredient", locals: { ingredient: ingredient } %>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
 </div>
