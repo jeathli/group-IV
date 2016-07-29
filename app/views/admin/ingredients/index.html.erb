@@ -20,7 +20,7 @@
       </thead>
       <tbody>
         <% @ingredients.each do |ingredient| %>
-          <%= render partial: "ingredient", locals: { ingredient: ingredient } %>
+        <%= render partial: "ingredient", locals: { ingredient: ingredient } %>
         <% end %>
       </tbody>
     </table>
