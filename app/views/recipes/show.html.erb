@@ -11,11 +11,11 @@
     </div>
 
     <div class="container__recipe--ingredients_list"><b>Ingredients:</b><br>
-      <%= @recipe.ingredient_details %>
+      <%= simple_format(@recipe.ingredient_details) %>
     </div>
 
     <div class="container__recipe--preparation">
-      <%= @recipe.description %>
+      <%= simple_format(@recipe.description) %>
     </div>
   </div>
   <div class="dl-cell mdl-cell--1-col"></div>
