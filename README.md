@@ -44,6 +44,13 @@ All suggestions must follow steps:
 * [Małgorzata Maksimowicz](https://github.com/gosiamaks)
 * [Aneta Woźniak](https://github.com/jeathli)
 
+with assistance from
+Ragnarson Team &
+* [Asia Bukowska](https://github.com/abukowska)
+* [Konrad Ciarczynski](https://github.com/crsck)
+* [Agnieszka Kryjewska](https://github.com/almuredin)
+* [Agata Salska](https://github.com/agatasalska)
+
 ## Acknowledgments
 
 * **Billie Thompson** - *readme.md template* - [PurpleBooth](https://github.com/PurpleBooth)
