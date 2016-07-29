@@ -1,5 +1,11 @@
-<h1>Recipes:</h1>
-<table width="100%" border="1">
+<div class="custom-container">
+<h3>Recipes:</h3>
+
+<button  class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-container">
+<%= link_to 'add new', [:new, :admin, :recipe] %>
+</button>
+
+<table width="100%">
   <thead>
     <tr>
       <th>Name</th>
@@ -16,5 +22,4 @@
     <% end %>
   </tbody>
 </table>
-
-<p><%= link_to 'New Recipe', [:new, :admin, :recipe] %></p>
+</div>
