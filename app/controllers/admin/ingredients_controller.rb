@@ -1,5 +1,4 @@
-class Admin::IngredientsController < ApplicationController
-  http_basic_authenticate_with name: ENV.fetch('ADMIN_USER_NAME', 'admin'), password: ENV.fetch('ADMIN_PASSWORD', '1234')
+class Admin::IngredientsController < Admin::BaseController
 
   def index
     @ingredients = Ingredient.all.order(:name)

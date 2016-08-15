@@ -1,23 +1,30 @@
-<h1>Editing ingredient</h1>
-<div>
-  <% if @ingredient.errors.any? %>
-    <ul>
-      <% @ingredient.errors.full_messages.each do |msg| %>
+<div class="mdl-grid">
+  <div class="mdl-layout-spacer"></div>
+  <div class="mdl-cell mdl-cell--4-col">
+    <h1 class="container__recipe--name">Edit ingredient</h1>
+
+    <div>
+      <% if @ingredient.errors.any? %>
+      <ul>
+        <% @ingredient.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
+        <% end %>
+      </ul>
       <% end %>
-    </ul>
-  <% end %>
+    </div>
+
+    <%= form_for [:admin, @ingredient], method: :patch do |i| %>
+    <div class="group flex-for-div">
+      <%= i.text_field :name , class: "mdl-grid mdl-cell--12-col"%>
+    </div>
+
+    <div class="group margin font">
+      <button type="submit"
+      class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+      Submit
+      </button>
+    </div>
+    <% end %>
+  </div>
+<div class="mdl-layout-spacer"></div>
 </div>
-
-<%= form_for [:admin, @ingredient], method: :patch do |i| %>
-  <div class="group">
-    <%= i.label :name %>
-    <%= i.text_field :name %>
-  </div>
-
-  <div class="group">
-    <%= i.submit %>
-  </div>
-<% end %>
-
-<%= link_to 'Back', admin_ingredients_path %>

@@ -1,20 +1,32 @@
-<h1>Recipes:</h1>
-<table width="100%" border="1">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th colspan="2">Options</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @recipes.each do |recipe| %>
-      <tr>
-        <td><%= recipe.name %></td>
-        <td><%= link_to 'Edit', [:edit, :admin, recipe] %></td>
-        <td><%= link_to 'Destroy', [:admin, recipe], method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<div class="mdl-grid admin_ingredients--center">
+  <div class="mdl-layout-spacer"></div>
+  <div class="mdl-cell mdl-cell--12-col">
+    <h1 class="container__recipe--name" style="text-align: center">Recipes</h1>
+    <button class="mdl-button mdl-js-button mdl-button--fab ingredients">
+      <i class="material-icons"><%= link_to 'add new', [:new, :admin, :recipe] %></i>
+    </button>
+  </div>
+</div>
 
-<p><%= link_to 'New Recipe', [:new, :admin, :recipe] %></p>
+<div class="mdl-grid">
+  <div class="mdl-layout-spacer"></div>
+  <div class="mdl-cell mdl-cell--12-col center">
+    <table class="table ingredients">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th colspan="2">Options</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @recipes.each do |recipe| %>
+        <tr>
+          <td><%= recipe.name %></td>
+          <td><%= link_to 'Edit', [:edit, :admin, recipe] %></td>
+          <td><%= link_to 'Destroy', [:admin, recipe], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

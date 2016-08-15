@@ -1,0 +1,5 @@
+<tr>
+  <td><%= ingredient.name %></td>
+  <td><%= link_to 'Edit', [:edit, :admin, ingredient] %></td>
+  <td><%= link_to 'Destroy', [:admin, ingredient], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+</tr>
